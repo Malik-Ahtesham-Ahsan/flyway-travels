@@ -94,7 +94,11 @@ export const homeContent = {
     explore: "Explore",
     contact: "Say hello",
     legal: "© {year} Flyway Travels Ltd. All rights reserved.",
-    policies: ["Privacy", "Terms"],
+    policies: [
+      { label: "Privacy Policy", href: "/privacy-policy" },
+      { label: "Terms & Conditions", href: "/terms" },
+      { label: "Refund Policy", href: "/refund-policy" },
+    ],
     whatsappLabel: "Chat with Flyway on WhatsApp",
   },
 } as const;

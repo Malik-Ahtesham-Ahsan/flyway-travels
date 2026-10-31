@@ -27,7 +27,7 @@ export default function Footer() {
           <div className="mt-5 flex gap-4">{siteConfig.socials.map((social) => <a key={social.label} href={social.href} target="_blank" rel="noreferrer" className="inline-flex items-center gap-1 text-xs font-semibold text-white hover:text-[#a7ddd0]">{social.label}<ArrowUpRight size={12} /></a>)}</div>
         </div>
       </Container>
-      <div className="border-t border-white/15"><Container className="flex min-h-14 flex-col justify-center gap-2 py-3 text-xs text-white/55 sm:flex-row sm:items-center sm:justify-between"><p>{homeContent.footer.legal.replace("{year}", String(year))}</p><p>{siteConfig.name}</p></Container></div>
+      <div className="border-t border-white/15"><Container className="flex min-h-14 flex-col justify-center gap-3 py-4 text-xs text-white/55 sm:flex-row sm:items-center sm:justify-between"><p>{homeContent.footer.legal.replace("{year}", String(year))}</p><div className="flex flex-wrap gap-4">{homeContent.footer.policies.map((policy) => <Link key={policy.href} href={policy.href} className="hover:text-white">{policy.label}</Link>)}</div></Container></div>
     </footer>
   );
 }
