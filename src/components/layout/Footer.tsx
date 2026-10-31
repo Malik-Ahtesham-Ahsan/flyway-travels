@@ -12,7 +12,7 @@ export default function Footer() {
   useEffect(() => { setYear(new Date().getFullYear()); }, []);
   return (
     <footer className="bg-[#123b3a] text-white">
-      <Container className="grid gap-10 py-14 sm:grid-cols-2 lg:grid-cols-[1.4fr_0.8fr_1fr] lg:py-16">
+      <Container className="grid gap-10 py-14 sm:grid-cols-2 lg:grid-cols-[1.4fr_0.8fr_0.8fr_1fr] lg:py-16">
         <div>
           <Link href="#home" className="inline-flex items-center gap-2.5"><span className="grid size-9 place-items-center rounded-full bg-white text-brand"><Plane size={18} /></span><span className="font-display text-lg font-extrabold">{siteConfig.shortName}<span className="text-accent">.</span></span></Link>
           <p className="mt-4 max-w-xs text-sm leading-6 text-white/70">{homeContent.footer.tagline}</p>
@@ -20,6 +20,14 @@ export default function Footer() {
         <div>
           <h2 className="text-xs font-bold uppercase tracking-[0.12em] text-[#a7ddd0]">{homeContent.footer.explore}</h2>
           <div className="mt-4 flex flex-col items-start gap-3">{homeContent.nav.links.map((link) => <Link className="text-sm text-white/75 hover:text-white" key={link.href} href={link.href}>{link.label}</Link>)}</div>
+        </div>
+        <div>
+          <h2 className="text-xs font-bold uppercase tracking-[0.12em] text-[#a7ddd0]">Company</h2>
+          <div className="mt-4 flex flex-col items-start gap-3">
+            <Link className="text-sm text-white/75 hover:text-white" href="#about">About us</Link>
+            <Link className="text-sm text-white/75 hover:text-white" href="#contact">Contact us</Link>
+            {homeContent.footer.policies.map((policy) => <Link key={policy.href} href={policy.href} className="text-sm text-white/75 hover:text-white">{policy.label}</Link>)}
+          </div>
         </div>
         <div>
           <h2 className="text-xs font-bold uppercase tracking-[0.12em] text-[#a7ddd0]">{homeContent.footer.contact}</h2>
