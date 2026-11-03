@@ -31,7 +31,7 @@ export default function Footer() {
         </div>
         <div>
           <h2 className="text-xs font-bold uppercase tracking-[0.12em] text-[#a7ddd0]">{homeContent.footer.contact}</h2>
-          <div className="mt-4 flex flex-col items-start gap-3 text-sm text-white/75"><a href={`mailto:${siteConfig.email}`} className="hover:text-white">{siteConfig.email}</a><a href={`tel:${siteConfig.phone.replace(/\s/g, "")}`} className="hover:text-white">{siteConfig.phone}</a><span>{siteConfig.hours}</span></div>
+          <div className="mt-4 flex flex-col items-start gap-3 text-sm text-white/75"><a href={`mailto:${siteConfig.email}`} className="hover:text-white">{siteConfig.email}</a><a href={`https://wa.me/${siteConfig.phone.replace(/\D/g, "")}?text=${encodeURIComponent(siteConfig.whatsappMessage)}`} target="_blank" rel="noreferrer" className="hover:text-white">{siteConfig.phone}</a><span>{siteConfig.hours}</span></div>
           <div className="mt-5 flex gap-4">{siteConfig.socials.map((social) => <a key={social.label} href={social.href} target="_blank" rel="noreferrer" className="inline-flex items-center gap-1 text-xs font-semibold text-white hover:text-[#a7ddd0]">{social.label}<ArrowUpRight size={12} /></a>)}</div>
         </div>
       </Container>

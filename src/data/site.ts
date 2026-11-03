@@ -1,7 +1,7 @@
 export const siteConfig = {
   name: "FLYWAY TRAVELS LTD",
   shortName: "Flyway",
-  phone: "+44 20 7946 0000",
+  phone: "+44 7460 670044",
   email: "hello@flywaytravels.co.uk",
   address: "United Kingdom",
   hours: "Monday to Saturday, 9:00 am-6:00 pm",
